@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "azk8s01"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "azk8s01"
+    spec:
+      containers:
+        - name: "azk8s01"
+          image: "crazure.azurecr.io/azk8s01"
+          ports:
+          - containerPort: 80
